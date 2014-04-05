@@ -2,7 +2,7 @@ bl_info = {
     "name": "Fix Scale and Unwrap",
     "author": "Christian Schulz",
     "version": (0, 9),
-    "blender": (2, 69),
+    "blender": (2, 70),
     "location": "View3D > Toolbar",
     "description": "The method can be performed in object mode. First, the scale of the selected object will be fixed. Afterwards the object will be unwrapped depending on its seams. If multiple objects are selected, every item will be processed.",
     "category": "Object"}
@@ -16,6 +16,7 @@ class VIEW3D_PT_tools_scaleandunwrapobject(bpy.types.Panel):
     """
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'TOOLS'
+    bl_category = 'Tools'
     bl_context = "objectmode"
     bl_label = "Fix Scale and Unwrap"
     bl_description = "Fix Scale and Unwrap an object"
