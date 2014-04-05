@@ -37,13 +37,11 @@ class ScaleAndUnwrapObject(bpy.types.Operator):
     def execute(self, context):
 
         """
-        Performs the following steps in order:
-
         1. Set active object to the one selected. If multiple objects are selected it will iterate over every item.
         2. Apply fix scale to the active object
-        3. Open the object edit mode
+        3. Open the object in edit mode
         4. Select the whole mesh
-        5. Unwrap everything according to the marked seams
+        5. Unwrap everything (seams should already be marked)
         6. Go back in object mode
         7. If multiple objects are selected, go back to step 1
         8. Report if every item was processed
