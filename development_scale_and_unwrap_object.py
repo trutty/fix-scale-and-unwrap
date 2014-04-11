@@ -1,7 +1,7 @@
 bl_info = {
     "name": "Fix Scale and Unwrap",
     "author": "Christian Schulz",
-    "version": (0, 9),
+    "version": (0, 91),
     "blender": (2, 70),
     "location": "View3D > Toolbar",
     "description": "The method can be performed in object mode. First, the scale of the selected object will be fixed. Afterwards the object will be unwrapped depending on its seams. If multiple objects are selected, every item will be processed.",
@@ -31,6 +31,7 @@ class ScaleAndUnwrapObject(bpy.types.Operator):
     """
     Make it possible to undo operations and define certain parameters.
     """
+    bl_label = "Apply to selections"
     bl_idname = "object.scale_and_unwrap_object"
     bl_options = {'REGISTER', 'UNDO'}
 
